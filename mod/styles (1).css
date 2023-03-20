@@ -1,0 +1,86 @@
+body {
+    width: 100%;
+}
+.container {
+    position: relative;
+    text-align: center;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    color: white;
+    margin-right: -20px;
+    height: auto;
+    width: auto;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.contact {
+font-family: Roboto;
+}
+
+.spacing {
+    height: 130px;
+}
+
+.test {
+    size: 40;
+}
+
+.info-text {
+    color: #666666;
+    display: block;
+    margin: 1rem;
+}
+
+.form-area {
+    background-color: rgb(240, 240, 240);
+    margin: -10px -10px auto auto;
+    
+}
+
+.form-center {
+    margin: 5% 5% 5% 5%;
+    max-width: 800px;
+    min-width: 150px;
+    
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 5px 0 0 0;
+}
+
+textarea{
+    display: block;
+    width: 100%;
+    margin: 5px 0 0 0;
+}
+
+label {
+    display: block;
+    margin: 1.1rem;
+    color: #666666;
+    font-weight: bold;
+}
+
+button {
+    width: 101%;
+    /*margin: 1.1rem;*/
+    /*display: block;*/
+    height: 2rem;
+    margin: auto auto auto auto;
+}
+
