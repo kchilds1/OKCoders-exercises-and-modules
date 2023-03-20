@@ -1,0 +1,43 @@
+* {
+    Box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #24292f; 
+    color: #fafafa;
+    padding: 16px 32px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
+}
+
+#input-name {
+    border-radius: 5px;
+    height: 27px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.github-icon {
+    font-size: 27px;
+    
+}
+
+.margin {
+    margin-right: 10px;
+}
