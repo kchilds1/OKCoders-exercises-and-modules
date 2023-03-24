@@ -30,7 +30,19 @@ header, footer {
 }
 .flex {
     display: flex;
+    align-items: center;
 }
+
+.alert-symbol {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  }
 
 .align-items {
     align-items: center;
@@ -38,10 +50,12 @@ header, footer {
 
 .icon {
     font-size: 20px;
+    margin-right:10px;
 }
 
 .github-icon {
     font-size: 27px;
+    margin-right: 5px;
     
 }
 
@@ -83,4 +97,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.margin {
+    margin-right: 5px;
 }
