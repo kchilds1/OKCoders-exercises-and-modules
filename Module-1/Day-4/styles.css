@@ -63,8 +63,14 @@ html,body {
     padding: 2px 16%;
     justify-content: space-evenly;
     flex-wrap:wrap;
+    gap: 16px;
     
 
+}
+
+.section-flex div {
+    flex:auto;
+    flex-shrink: 0;
 }
 
 ul {
