@@ -79,7 +79,7 @@ a:active {
      align-items: center;
      flex-direction: column;
      color: #fafafa;
-     margin:-673px;
+     margin:-42.0625rem;
      font-size: 25px;
      
      
@@ -90,19 +90,13 @@ a:active {
 } 
 
 .mid-home {
-    margin:10px;
+    margin:0.625rem;
 }
 
 
 /* MENU.HTML */
 
-.header2 {
-    display:flex;
-    justify-content: end;
-    background-color: burlywood;
-    position: sticky;
-    top:0;
-}
+
 
  .menu-image {
     width: auto;
@@ -161,4 +155,28 @@ h2, h1 {
     background-color:rgb(190, 118, 22);
     border-radius:10%;
     box-shadow: 0.625rem 0.625rem;;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    position:static;
+    bottom:0;
+    background-color:burlywood;
+    margin-top: 12px;
+    
+}
+
+li {
+    list-style-type:none;
+}
+
+.button {
+    background-color: black;
+    color: #fafafa;
+
+}
+
+ul {
+    padding-left:0;
 }
