@@ -23,6 +23,7 @@ body {
     height: 1.875rem;
     position:sticky;
     top:0;
+    flex-wrap: wrap;
 }
 
 .top2{
@@ -52,12 +53,28 @@ body {
     flex-direction: column;
     height: 100vh;
     position: sticky;
-    top:0px;
-    left: 0px;
+    top:0;
+    left: 0;
     justify-content: space-between;
     font-size: 1.5625rem;
     float:left;
-    
+}
+
+.cart {
+    display:flex;
+    justify-content: center;
+    align-content: center; 
+    position:fixed;
+    bottom:0;
+    left:0;
+    margin-left:10px;
+    margin-bottom: 200px;
+    background-color: rgb(190, 118, 22);
+    padding: 0.625rem;
+    font-size: 1.875rem;
+    border-radius: 100%;
+   
+
 }
 
 a:link {
@@ -116,6 +133,9 @@ a:active {
     justify-content: space-evenly;
     background-color:burlywood;
     margin-top: 45.25rem;
+    flex-wrap: wrap;
+    position:sticky;
+    bottom:0;
 }
 
 .message-icon {
@@ -125,11 +145,13 @@ a:active {
     position:fixed;
     bottom:0;
     right:0;
+    margin-bottom:0.625rem;
+    margin-right:0.625rem;
     background-color: rgb(190, 118, 22);
     padding: 0.625rem;
     font-size: 1.875rem;
     border-radius: 100%;
-    
+    z-index:1;
 
 }
 
