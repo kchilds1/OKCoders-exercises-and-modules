@@ -11,14 +11,16 @@ body {
   
 } 
 
+/* HOME HTML */
+
 .container {
     display: flex;
     background-color: burlywood;
     color: black;
     justify-content:right;
     align-items:center;
-    font-size: 25px;
-    height: 30px;
+    font-size: 1.5625rem;
+    height: 1.875rem;
     position:sticky;
     top:0;
 }
@@ -26,27 +28,25 @@ body {
 .top2{
     display: flex;
     align-items:center;
-    padding-right: 10px;
+    padding-right: 0.625rem;
     flex-wrap: wrap;
 }
 
 .mug-icon {
-    padding-right:10px;
+    padding-right:0.625rem;
 }
 
 
 .head {
-    margin-right:10px;
+    margin-right:0.625rem;
 }
-
-
 
 .side-header {
     display: flex;
     background-color: burlywood; 
     text-align: center;
-    width: 150px;
-    padding: 10px 5px 0 5px;
+    width: 9.375rem;
+    padding: 0.625rem 0.3rem 0 0.3rem;
     color:black;
     padding-left:0%;
     flex-direction: column;
@@ -55,7 +55,7 @@ body {
     top:0px;
     left: 0px;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: 1.5625rem;
     float:left;
     
 }
@@ -63,6 +63,7 @@ body {
 a:link {
     text-decoration: none;
 }
+
 a:visited { 
     text-decoration: none;
     color: black; 
@@ -86,7 +87,7 @@ a:active {
      align-items: center;
      flex-direction: column;
      color: #fafafa;
-     font-size: 25px;
+     font-size: 1.5625rem;
      text-align: center;
 }
 
@@ -99,28 +100,40 @@ a:active {
 }
 
 .home-button {
-    padding: 20px;
+    padding: 1.25rem;
     color: #fafafafa;
     font-weight:bold;
-    font-size:25px;
+    font-size:1.5625rem;
     border-radius: 10%;
     border-style:solid;
     border-color:black;
-    border-width: 5px;
+    border-width: 0.3rem;
     background-color: rgb(190, 118, 22);
 }
 
 .footer {
     display: flex;
     justify-content: space-evenly;
-
     background-color:burlywood;
-    margin-top: 724px;
+    margin-top: 45.25rem;
+}
+
+.message-icon {
+    display:flex;
+    justify-content: center;
+    align-content: center; 
+    position:fixed;
+    bottom:0;
+    right:0;
+    background-color: rgb(190, 118, 22);
+    padding: 0.625rem;
+    font-size: 1.875rem;
+    border-radius: 100%;
+    
+
 }
 
 /* MENU.HTML */
-
-
 
  .menu-image {
     width: auto;
@@ -134,8 +147,8 @@ a:active {
     display:flex;
     justify-content: center;
     font-family: Bookman, URW Bookman L, serif;
-    
 }
+
 
 .menu {
     display: flex;
@@ -184,7 +197,7 @@ h2, h1 {
 
 .adjust-width {
     width: 78%;
-    margin-left:10px;
+    margin-left:0.625rem;
 } 
 
 li {
@@ -204,8 +217,8 @@ form {
     justify-content:space-evenly;
     align-content: center;
     background-color:burlywood; 
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 0.625rem;
+    padding: 1.25rem;
     border-radius: 5%;
     width:50%;
     margin-left: 25%;
@@ -223,6 +236,7 @@ form {
 .name {
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .contact-info {
@@ -232,16 +246,17 @@ form {
 }
 
 .mi {
-    width: 20px;
+    width: 1.25rem;
+    margin-right:0.625rem;
 }
-input, textarea {
+input, textarea, .submit-form {
     border:none;
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 .contact-info {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .submit {
@@ -251,3 +266,7 @@ input, textarea {
 }
 
 /* ABOUT US */
+
+.about-message {
+    background-color:#fafafa;
+}
