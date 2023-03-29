@@ -8,6 +8,7 @@ html,body {
 
 body {
   background-image: url("https://elementalcoffee.com/wp-content/uploads/2017/10/cropped-frontpage-1.jpg");
+  
 } 
 
 .container {
@@ -18,6 +19,8 @@ body {
     align-items:center;
     font-size: 25px;
     height: 30px;
+    position:sticky;
+    top:0;
 }
 
 .top2{
@@ -27,7 +30,9 @@ body {
     flex-wrap: wrap;
 }
 
-
+.mug-icon {
+    padding-right:10px;
+}
 
 
 .head {
@@ -51,6 +56,8 @@ body {
     left: 0px;
     justify-content: space-between;
     font-size: 25px;
+    float:left;
+    
 }
 
 a:link {
@@ -79,10 +86,8 @@ a:active {
      align-items: center;
      flex-direction: column;
      color: #fafafa;
-     margin:-42.0625rem;
      font-size: 25px;
-     
-     
+     text-align: center;
 }
 
  .coffee-logo {
@@ -93,6 +98,25 @@ a:active {
     margin:0.625rem;
 }
 
+.home-button {
+    padding: 20px;
+    color: #fafafafa;
+    font-weight:bold;
+    font-size:25px;
+    border-radius: 10%;
+    border-style:solid;
+    border-color:black;
+    border-width: 5px;
+    background-color: rgb(190, 118, 22);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+
+    background-color:burlywood;
+    margin-top: 724px;
+}
 
 /* MENU.HTML */
 
@@ -115,7 +139,7 @@ a:active {
 
 .menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
@@ -155,28 +179,75 @@ h2, h1 {
     background-color:rgb(190, 118, 22);
     border-radius:10%;
     box-shadow: 0.625rem 0.625rem;;
-}
-
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    position:static;
-    bottom:0;
-    background-color:burlywood;
-    margin-top: 12px;
     
 }
+
+.adjust-width {
+    width: 78%;
+    margin-left:10px;
+} 
 
 li {
     list-style-type:none;
 }
 
-.button {
-    background-color: black;
-    color: #fafafa;
-
-}
 
 ul {
     padding-left:0;
 }
+
+/* CONTACT INFO */
+
+form {
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-content: center;
+    background-color:burlywood; 
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5%;
+    width:50%;
+    margin-left: 25%;
+    height: 100vh;
+    flex-wrap: wrap;
+    
+}
+ .contact {
+    display: flex;
+    justify-content: center;
+    
+    
+} 
+
+.name {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-info {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mi {
+    width: 20px;
+}
+input, textarea {
+    border:none;
+    padding: 5px;
+}
+
+.contact-info {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.submit {
+    background-color: rgb(190, 118, 22);
+    border:none;
+    border-radius: 10%;
+}
+
+/* ABOUT US */
