@@ -2,6 +2,10 @@
     Box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 html,body {
     margin: 0;
     background-color: #c6c3c3;
@@ -15,6 +19,8 @@ html,body {
     align-items: center;
     flex-direction: row;
     background-color: #000000;
+    position: sticky;
+    top:0;
     color: #fafafa; 
     padding:10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -25,29 +31,28 @@ i {
     margin-right: 5px;
 }
 
-a:link {
+.footer-color a:link, .top-header a:link, .head2 a:link {
   color: #fafafa;
   text-decoration: none;
 }
 
 /* visited link */
-a:visited {
+.footer-color a:visited, .top-header a:visited, .head2 a:visited {
   color: #fafafa;
   text-decoration: none;
 }
 
 /* mouse over link */
-a:hover {
+.footer-color a:hover, .top-header a:hover, .head2 a:hover {
   color: #ffc72c;
   text-decoration: none;
 }
 
 /* selected link */
-a:active {
+.footer-color a:active, .top-header a:active, .head2 a:active {
   color: #fafafa;
   text-decoration: none;
 }
-
 
 /* SECOND HEADER */
 
@@ -57,7 +62,8 @@ a:active {
     align-items: center;
     background-color:#000000;
     margin-top: 2px;
-    
+    position: sticky;
+    top:0;
     padding:23px 0 21px;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -74,6 +80,31 @@ a:active {
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* unvisited link */
+.o a:link {
+    color: #000000;
+  text-decoration: none;
+  }
+  
+  /* visited link */
+  .o a:visited {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  .o a:hover {
+    color: #fafafa;
+    background-color:red;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  .o a:active {
+    color: #000000;
+    text-decoration: none;
+  }
 
 .logo2 {
     margin-bottom:-17px;
@@ -104,9 +135,28 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.flex-items a:link {
+    color: #000000;
+    text-decoration: none;
+  }
+  .flex-items a:visited {
+      color: #000000;
+    text-decoration: none;
+  }
+  
+  .flex-items a:hover {
+    color:#000000;
+    text-decoration: none;
+    }
+  
+  .flex-items a:active {
+    color:#000000;
+    text-decoration: none;
+  }
+
  .pie, .Fish-sandwich, .bacon-cheese-burger, .hand-breaded-chicken-combo {
     display:inline-flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-direction:column;
@@ -143,10 +193,6 @@ h1 {
     list-style-type: none;
 }
 
-.copyright-info {
-
-}
-
 .footer-color {
 
     background-color: #000000;
@@ -166,3 +212,22 @@ h1 {
 .space-between {
     padding-right:10px;
 }
+
+.test {
+    text-align: right;
+    list-style-type: none;
+  text-align: left;  
+  padding-left: 30px;
+  margin-left: 0px;
+}
+.test, .t, .copyright-info {
+    display: inline-block;
+    ;
+}
+
+.footer-bullets .t {
+  margin-left: 100px;
+  padding:0;
+}
+
+
