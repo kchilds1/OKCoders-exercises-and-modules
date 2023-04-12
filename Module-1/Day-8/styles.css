@@ -63,10 +63,8 @@ body {
 .cart {
     display:flex;
     justify-content: center;
-    align-content: center; 
     position:fixed;
     bottom:0;
-    left:0;
     margin-left:0.625rem;
     margin-bottom: 12.5rem;
     background-color: rgb(190, 118, 22);
@@ -121,7 +119,7 @@ a:active {
     color: #fafafafa;
     font-weight:bold;
     font-size:1.5625rem;
-    border-radius: 10%;
+    border-radius: 10px;
     border-style:solid;
     border-color:black;
     border-width: 0.3rem;
@@ -156,6 +154,28 @@ a:active {
 }
 
 /* MENU.HTML */
+
+.items:link {
+    text-decoration: none;
+}
+
+.items:visited { 
+    text-decoration: none;
+    color: black; 
+}
+
+.items:hover {
+    color:black;
+    border-radius: 10%;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.items:active {
+    text-decoration: none;
+}
+
 
  .menu-image {
     width: auto;
