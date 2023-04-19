@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Coffee</title>
     <script src="https://kit.fontawesome.com/34d1ce521c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles.css">
 </head>
   <body>
     <header class="container">
@@ -18,6 +18,10 @@
         </div>
         <a href="#" class="head hover link">HOME</a> 
         <a href="contact.html" class="head hover link">CONTACT</a>
+        <div class="cart-header" >
+          <a href="cart.html"><i class="fa-solid fa-cart-plus hover"></i></a>
+          <div id="cartAmount" class="cart-amount">0</div>
+      </div>
         <label for="text"></label>
         <input class="text" placeholder="Search...">
         <i class="fa-sharp fa-solid fa-magnifying-glass hover"></i>
@@ -28,15 +32,16 @@
     <header class="side-header">
       <div class="top">
         <div>
-          <a href="menu.html" class="hover">MENU</a>
-          <p class="hover link">HOT DRINKS</p>
-          <p class="hover link">COLD DRINKS</p>
-          <p class="hover link">BREAKFAST</p>
-          <p class="hover link">LUNCH</p>
-          <p class="hover link">ABOUT US</p>
+          <a href="menu.html" class="hover">MENU</a><br>
+          <a href="#" class="hover link">HOT DRINKS</a>
+          <a href="#" class="hover link">COLD DRINKS</a>
+          <a href="#" class="hover link">BREAKFAST</a>
+          <a href="#" class="hover link">LUNCH</a>
+          <a href="about.html" class="hover link">ABOUT US</a>
         </div>
       </div>
-      <script src="home.js"></script> 
+      
+      <script src="src/home.js"></script> 
     </header>
     <section class="coffee-mid">
       <img src="coffee-image.png" class="coffee-logo"/> 

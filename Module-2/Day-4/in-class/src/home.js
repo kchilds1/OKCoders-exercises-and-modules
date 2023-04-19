@@ -13,7 +13,14 @@ let initial = document.getElementById("initial");
     //localStorage.setItem("data", JSON.stringify(basket));
 }
 
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
+let calculation =()=>{
+    let IconForCart = document.getElementById("cartAmount");
+    IconForCart.innerHTML = (basket.map((x)=> x.item).reduce((x,y) => x+y, 0));
+};
+
+calculation();
 
 
 
