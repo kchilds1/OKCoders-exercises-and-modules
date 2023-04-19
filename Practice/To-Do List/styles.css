@@ -1,0 +1,37 @@
+* {
+    Box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+    background-color: burlywood;
+}
+
+section {
+    border-style: solid;
+    border-color: black;
+    margin: 20px 30%;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+input {
+    background-color:aqua;
+}
+
+li {
+    
+    font-size: 20px;
+    
+}
