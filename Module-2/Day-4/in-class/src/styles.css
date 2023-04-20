@@ -158,11 +158,13 @@ a:active {
 
 }
 
-h2, h1, h4 {
+
+
+h2, h1 {
     color:rgb(190, 118, 22);
 }
 
-h3 {
+h3, h5 {
     color: white;
  }
 li {
