@@ -249,12 +249,13 @@ input, textarea, .submit-form {
 .shopping-cart-h1 {
     display:flex;
     justify-content: center;
+    
 }
 
 /* Shop items styles are here */
  .shopmenu {
-    
-   display: grid; 
+
+  display: grid; 
   grid-template-columns: repeat(4, 250px); 
   gap: 30px;
   justify-content: center;
@@ -304,6 +305,8 @@ input, textarea, .submit-form {
 }
 
 .quantity {
+    font-weight: bold;
+    font-size: 13.28px;
     color: #fafafafa;
 }
 
