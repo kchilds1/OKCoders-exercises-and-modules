@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="src/styles.css">
 </head>
   <body>
-    <header class="container">
+    <header>
       <div class="icon">
       </div>
-      <div class="top2">
+      <div class="top">
         <div class="mug-icon">
           <i class="fa-sharp fa-solid fa-mug-hot"></i>
         </div>
@@ -25,24 +25,20 @@
         <label for="text"></label>
         <input class="text" placeholder="Search...">
         <i class="fa-sharp fa-solid fa-magnifying-glass hover"></i>
-        <button id= "login-button">Login</button>
+        <button id= "login-button" class="hover">Login</button>
         <div id="initial"></div>
       </div>
     </header>
-    <header class="side-header">
-      <div class="top">
-        <div>
-          <a href="menu.html" class="hover">MENU</a><br>
-          <a href="#" class="hover link">HOT DRINKS</a>
-          <a href="#" class="hover link">COLD DRINKS</a>
-          <a href="#" class="hover link">BREAKFAST</a>
-          <a href="#" class="hover link">LUNCH</a>
-          <a href="about.html" class="hover link">ABOUT US</a>
-        </div>
-      </div>
-      
-      <script src="src/home.js"></script> 
-    </header>
+    <aside>
+      <nav>
+        <a href="menu.html" class="hover">MENU</a><br>
+        <a href="#" class="hover link">HOT DRINKS</a>
+        <a href="#" class="hover link">COLD DRINKS</a>
+        <a href="#" class="hover link">BREAKFAST</a>
+        <a href="#" class="hover link">LUNCH</a>
+        <a href="about.html" class="hover link">ABOUT US</a>
+      </nav>
+    </aside>
     <section class="coffee-mid">
       <img src="coffee-image.png" class="coffee-logo"/> 
       <p>WELCOME TO ELEMENTAL COFFEE</p>
@@ -75,6 +71,7 @@
           <i class="fa-brands fa-twitter hover"></i>
           <i class="fa-brands fa-linkedin hover"></i>
       </section>
-      
     </div>
+  </body>
+  <script src="src/home.js"></script>
 </html>
