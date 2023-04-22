@@ -1,25 +1,36 @@
-//pull ids into js
-const submit = document.getElementById("submit");//btnClear
-submit.addEventListener("click", clickHandler);
-// submit.addEventListener("click", inputHandler);
-const clearList = document.getElementById("clear-list");
-const item = document.getElementById("item").value;//input
+const details = document.getElementById("details");
+const submitButton = document.getElementById("submit-button");
+submitButton.addEventListener("click", submit);
+let input = document.getElementById("input");
+
+const clear = document.getElementById("clear-list-button");
+clear.addEventListener("click", clear);
+
+function 
 
 
-// add DOM EventListeners
 
-function clickHandler() {
-    const parent = document.getElementById("parent");
-    const item = document.getElementById("item").value;//input
-    const message =  item;
-    const messages = document.createTextNode(message);
-    const list = document.createElement("li");
-    parent.appendChild(list);
-    list.appendChild(messages);
-}
 
-// function inputHandler() {
-//     item.forEach(item => item.value = " ");
-        
+function submit() {
+    const details = document.getElementById("details");
+    let input = document.getElementById("input").value;
+    let par = document.createElement("p");
+    par.textContent = input;
+    details.appendChild(par);
     
-// }
+    
+    
+    
+    //    return details.innerHTML = `
+    //    <div class="lists">
+    //      <h2 id="tasks">${input}</h2>
+    //      <i class="fa-solid fa-x"></i> 
+    //    </div>
+    //    `
+      
+};
+
+
+
+
+

@@ -4,34 +4,57 @@
 
 html,body {
     margin: 0;
-    background-color: burlywood;
 }
 
-section {
-    border-style: solid;
-    border-color: black;
-    margin: 20px 30%;
-    padding-bottom: 20px;
+html {
+    background: url(codeshady-AHzHbWmNaU4-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.top, .details {
+    background-color: black;
+    border: 2px solid white;
+    padding: 0 0 20px 0;
+    margin: 30px 300px -20px 300px;
     border-radius: 10px;
 }
 
 h1 {
+    color:white;
     display: flex;
     justify-content: center;
 }
 
-div {
+.to-do-list-inputs{
+    color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
 }
 
-input {
-    background-color:aqua;
+.input {
+    background-color: lightblue;
 }
 
-li {
-    
-    font-size: 20px;
+.details {
+    color: white;
+    display: flex;
+    width: 25%;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
     
 }
+
+button, .fa-x {
+    cursor: pointer;
+}
+
+
+
+
+
