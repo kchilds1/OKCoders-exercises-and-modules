@@ -102,6 +102,10 @@ let removeItem = (id) => {
   generateCartItems();
   totalAmount();
   localStorage.setItem("data", JSON.stringify(basket));
+  // need to update cart value
+  // const cartValue = document.getElementById("cartAmount");
+  // cartValue.innerText = basket.length;
+
 };
 
 let ClearCart = ()=> {
