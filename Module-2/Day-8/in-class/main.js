@@ -38,16 +38,27 @@ function displayMenuItems() {//create menu items
  
 
 function addToCart(item) {
-    const cartItem = document.createElement("p"); // create a new paragraph element
+  const inCartButton = document.createElement("button");// creating a button for each item created in cart
+  const inCartButtonText = document.createTextNode(`Remove`);//adding text to button
+  inCartButton.addEventListener("click", () => displayShoppingCart()); 
+  const cartItem = document.createElement("p"); // create a new paragraph element
     const cartItemText = document.createTextNode(`Added ${item.Name} to cart for $${item.Price}`); // create text node for the added item details
     cartItem.appendChild(cartItemText); // append the text node to the paragraph element
+    inCartButton.appendChild(inCartButtonText);//append text to inCartButton
+    cartItem.appendChild(inCartButton);// append button with text to paragraph
     cart.appendChild(cartItem); // append the paragraph element to the shopping cart element in the HTML
     const cartItems = cart.querySelectorAll("p"); // get all the paragraph elements in the shopping cart
     const numItems = cartItems.length; // get the length of the resulting array to get the number of items in the shopping cart
-    console.log(numItems)
+    const total = document.createElement("p");//create a paragraph to display the total
+    const totalText = document.createTextNode(`Total items in cart:${numItems} `);
+    total.appendChild(totalText);
+    //console.log(numItems)
+    console.log(total)
   }
   
-//function displayShoppingCart()  
+function displayShoppingCart(){
+  console.log("i was clicked")
+}  
 
 
     
