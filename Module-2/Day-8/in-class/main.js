@@ -52,7 +52,7 @@ function addToCart(item) {
   inCartButton.appendChild(inCartButtonText);//append text to inCartButton
   cartItem.appendChild(inCartButton);// append button with text to paragraph
   cart.appendChild(cartItem); // append the paragraph element to the shopping cart element in the HTML
- Count();
+ totalCount();
 }
   
 function totalCount(){
