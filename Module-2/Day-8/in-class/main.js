@@ -38,27 +38,35 @@ function displayMenuItems() {//create menu items
  
 
 function addToCart(item) {
+  /*BELOW IS FOR THE REMOVAL BUTTON */
   const inCartButton = document.createElement("button");// creating a button for each item created in cart
   const inCartButtonText = document.createTextNode(`Remove`);//adding text to button
-  inCartButton.addEventListener("click", () => displayShoppingCart()); 
-  const cartItem = document.createElement("p"); // create a new paragraph element
-    const cartItemText = document.createTextNode(`Added ${item.Name} to cart for $${item.Price}`); // create text node for the added item details
-    cartItem.appendChild(cartItemText); // append the text node to the paragraph element
-    inCartButton.appendChild(inCartButtonText);//append text to inCartButton
-    cartItem.appendChild(inCartButton);// append button with text to paragraph
-    cart.appendChild(cartItem); // append the paragraph element to the shopping cart element in the HTML
-    const cartItems = cart.querySelectorAll("p"); // get all the paragraph elements in the shopping cart
-    const numItems = cartItems.length; // get the length of the resulting array to get the number of items in the shopping cart
-    const total = document.createElement("p");//create a paragraph to display the total
-    const totalText = document.createTextNode(`Total items in cart:${numItems} `);
-    total.appendChild(totalText);
-    //console.log(numItems)
-    console.log(total)
-  }
+  inCartButton.addEventListener("click", () => displayShoppingCart(inCartButton));//listen for when inCartButton is clicked and call displayShoppingCart function 
   
-function displayShoppingCart(){
-  console.log("i was clicked")
-}  
-
+  /*BELOW IS FOR TEXT CREATED IN PARAGRAPH*/
+  const cartItem = document.createElement("p"); // create a new paragraph element
+  const cartItemText = document.createTextNode(`Added ${item.Name} to cart for $${item.Price}`); // create text node for the added item details
+  cartItem.appendChild(cartItemText); // append the text node to the paragraph element
+ 
+ 
+  inCartButton.appendChild(inCartButtonText);//append text to inCartButton
+  cartItem.appendChild(inCartButton);// append button with text to paragraph
+  cart.appendChild(cartItem); // append the paragraph element to the shopping cart element in the HTML
+ Count();
+}
+  
+function totalCount(){
+ /*BELOW IF FOR THE TOTAL COUNT */
+  const cartItems = cart.querySelectorAll("p"); // get all the paragraph elements in the shopping cart
+  const numItems = cartItems.length; // get the length of the resulting array to get the number of items in the shopping cart
+  const total = document.getElementById("total-count");//create a paragraph to display the total
+  total.innerText = `Total items in cart: ${numItems} `;
+ }
+  
+function displayShoppingCart(removeButton){
+  const paragraphToRemove = removeButton.parentNode; // get the parent element of the remove button
+  paragraphToRemove.remove(); // remove the parent element, which is the paragraph you want to delete
+  totalCount();
+}
 
     

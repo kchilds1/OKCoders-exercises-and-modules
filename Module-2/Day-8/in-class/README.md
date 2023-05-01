@@ -26,15 +26,15 @@ Price (number) -->
 <!-- Update the shopping cart summary in the "shopping-cart" div -->
 Create a function called displayShoppingCart() that updates the content of the "shopping-cart" div with the current items in the shopping cart, displaying their name, price, and total price of the order.
 
-When the page loads, call the displayMenuItems() function to display the menu items on the page.
+<!-- When the page loads, call the displayMenuItems() function to display the menu items on the page. -->
 
-Add event listeners to the "Add to Cart" buttons, so that when the user clicks one, the addToCart() function is triggered.
+<!-- Add event listeners to the "Add to Cart" buttons, so that when the user clicks one, the addToCart() function is triggered. -->
 
 Tips:
 
-Use the createElement(), appendChild(), and other DOM manipulation methods to create and display the menu cards and shopping cart content.
+<!-- Use the createElement(), appendChild(), and other DOM manipulation methods to create and display the menu cards and shopping cart content.
 You can use getElementById(), querySelector(), or other DOM manipulation methods to access and manipulate elements in your JavaScript file.
-Use the addEventListener() method to attach event listeners to your "Add to Cart" buttons.
+Use the addEventListener() method to attach event listeners to your "Add to Cart" buttons. -->
 
 ## Pt. 2
 
