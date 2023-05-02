@@ -2,11 +2,13 @@ const menuItems = [//list of objects in my array for variable menuItems
     {
         "Name": "Carmel Latte",
         "Description": "If you like carmel and love coffee this is the best mix for you",
-        "Price": 10
+        "Price": 10,
+        "Discount": 1
     }, {
         "Name": "The Regular",
         "Description": "Regular coffee with your choice of almond milk or Soy milk",
-        "Price": 5
+        "Price": 5,
+        "Discount": 0.20
     }, {
         "Name": "Chocolate Latte",
         "Description":"Chocolate lovers dream with pure milk chocolate and chocolate creamer",
@@ -15,9 +17,8 @@ const menuItems = [//list of objects in my array for variable menuItems
 ]
 
 const cart = document.getElementById("shopping-cart");
-
 const menu = document.getElementById("menu");
-
+let paraText = 0;
 function displayMenuItems() {//create menu items
   for(let i = 0; i < menuItems.length; i++){//looping for how many object I have above
     const item = menuItems[i];// getting the values of each object and assigning it to item
@@ -27,15 +28,22 @@ function displayMenuItems() {//create menu items
      button.addEventListener("click", () => addToCart(item));
      button.appendChild(buttonText);
      cart.appendChild(button);
-     let paraText = document.createTextNode(`Item: ${item.Name} Price: $${item.Price} Description: ${item.Description}`);//create text for html document using properties from menuItems array
-     para.appendChild(paraText);//append text to the paragraph created
-     menu.appendChild(para);//append the combined text and paragraph element to the div with ID="menu"
-     
-  }
+     if(item.Discount !== undefined){
+      const originalPrice = document.createElement("del");
+      originalPrice.innerText = `Regular Price: $${item.Price}`;
+      para.appendChild(originalPrice);
+      const discountedPrice = document.createElement("ins");
+      discountedPrice.innerText = ` Discounted Price: $${item.Price - item.Discount}`;
+      para.appendChild(discountedPrice);
+      para.appendChild(document.createTextNode(`  Item: ${item.Name} Description: ${item.Description}`));
+    }else{
+      para.innerText = `Item: ${item.Name} Price: $${item.Price} Description: ${item.Description}`;
+    } 
+    menu.appendChild(para);
 }
- displayMenuItems();
+}
 
- 
+ displayMenuItems();
 
 function addToCart(item) {
   /*BELOW IS FOR THE REMOVAL BUTTON */
@@ -45,14 +53,24 @@ function addToCart(item) {
   
   /*BELOW IS FOR TEXT CREATED IN PARAGRAPH*/
   const cartItem = document.createElement("p"); // create a new paragraph element
-  const cartItemText = document.createTextNode(`Added ${item.Name} to cart for $${item.Price}`); // create text node for the added item details
+  let price = item.Price;
+  if (item.Discount !== undefined) {
+    price = item.Price - item.Discount;
+    const originalPrice = document.createElement("del");
+    originalPrice.innerText = `Regular Price: $${item.Price}`;
+    cartItem.appendChild(originalPrice);
+    const discountedPrice = document.createElement("ins");
+    discountedPrice.innerText = ` Discounted Price: $${price}`;
+    cartItem.appendChild(discountedPrice);
+  }
+  const cartItemText = document.createTextNode(` Added ${item.Name} to cart for $${price}`); // create text node for the added item details
   cartItem.appendChild(cartItemText); // append the text node to the paragraph element
- 
+  cartItem.dataset.price = price;
  
   inCartButton.appendChild(inCartButtonText);//append text to inCartButton
   cartItem.appendChild(inCartButton);// append button with text to paragraph
   cart.appendChild(cartItem); // append the paragraph element to the shopping cart element in the HTML
- totalCount();
+  totalCount();
 }
   
 function totalCount(){

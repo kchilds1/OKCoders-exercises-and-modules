@@ -42,13 +42,13 @@ Extend the functionality of the Coffee Shop 2.5 project by implementing a discou
 
 Requirements:
 
-Modify the menuItems array of objects to include a new property: discount (number, between 0 and 1, representing the discount percentage). Not all menu items need to have a discount.
+<!-- Modify the menuItems array of objects to include a new property: discount (number, between 0 and 1, representing the discount percentage). Not all menu items need to have a discount. -->
 
-Update the displayMenuItems() function to show the discounted price (if applicable) on the menu card for each item. Use if statements to check whether a discount is available for a particular menu item. If a discount is available, display the original price with a strikethrough and the discounted price next to it.
+<!-- Update the displayMenuItems() function to show the discounted price (if applicable) on the menu card for each item. Use if statements to check whether a discount is available for a particular menu item. If a discount is available, display the original price with a strikethrough and the discounted price next to it. -->
 
-Modify the addToCart() function to consider the discount when adding an item to the shopping cart. Use if statements to check if there's a discount available for the selected item. If there is, apply the discount to the price before adding it to the shopping cart.
+<!-- Modify the addToCart() function to consider the discount when adding an item to the shopping cart. Use if statements to check if there's a discount available for the selected item. If there is, apply the discount to the price before adding it to the shopping cart. -->
 
-Update the displayShoppingCart() function to display the discounted price (if applicable) for each item in the shopping cart. Use if statements to check whether a discount is available for a particular item in the shopping cart. If a discount is available, display the original price with a strikethrough and the discounted price next to it.
+<!-- Update the displayShoppingCart() function to display the discounted price (if applicable) for each item in the shopping cart. Use if statements to check whether a discount is available for a particular item in the shopping cart. If a discount is available, display the original price with a strikethrough and the discounted price next to it. -->
 
 Tips:
 
