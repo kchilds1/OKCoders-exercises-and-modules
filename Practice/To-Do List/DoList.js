@@ -30,12 +30,14 @@ function submittedValue(){
     newPara.textContent = toDoListInputValue;
     task.appendChild(newPara);
     task.appendChild(removeButton);
-    
+
     removeButton.addEventListener("click", function() {
+      console.log("i was clicked");
         newPara.remove();
         removeButton.remove();
         saveListItems();
     });
+   
 
     
 
@@ -44,6 +46,8 @@ function submittedValue(){
     toDoListInput.placeholder = "please type here...";
     saveListItems();
 }
+
+
 
 function clearList(){
     task.innerHTML = "";
