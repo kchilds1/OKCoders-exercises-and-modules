@@ -6,55 +6,36 @@ html,body {
     margin: 0;
 }
 
-html {
-    background: url(codeshady-AHzHbWmNaU4-unsplash.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-    
-}
-
-.top, .details {
-    background-color: black;
-    border: 2px solid white;
-    padding: 0 0 20px 0;
-    margin: 30px 300px -20px 300px;
+.top{
+    border: solid;
     border-radius: 10px;
+    padding-bottom: 25px;
+    margin: 0 100px;
 }
 
-h1 {
-    color:white;
+h1{
     display: flex;
     justify-content: center;
 }
 
-.to-do-list-inputs{
-    color: white;
+.input-info{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;
+    gap: 5px;
+    align-items: center;
 }
 
-.input {
-    background-color: lightblue;
+#toDoListInput{
+    margin: 20px 0 20px 0;
 }
 
-.details {
-    color: white;
+#task{
     display: flex;
-    width: 25%;
+    justify-content: center;
+    gap: 5px;
     padding: 10px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    
 }
 
-button, .fa-x {
-    cursor: pointer;
+button {
+    margin:20px 0 20px 0;
 }
-
-
-
-
-

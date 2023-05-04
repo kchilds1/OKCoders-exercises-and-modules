@@ -5,27 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/34d1ce521c.js" crossorigin="anonymous"></script>
-  <title>To Do List</title>
+  <title>To-do-list</title>
 </head>
-  <body>
-    
-      <div class="top">
-        <h1>To-Do-List</h1>
-        <div class="to-do-list-inputs">
-          <label for="input">What do we need to do?</label>
-          <input id="input" class="input" placeholder="Enter task here..." required>
-          <button class="button" id="submit-button">Submit</button>
-          <button class="button" id="clear-list-button">ClearList</button>
-          <!-- <input type="reset" value="Reset Values"/> -->
-        </div>
-      </div>
-      <div id="details" class="details">
-        
-
-        
-      </div>
-    
-  </body>
+<body>
+  <div class="top">
+    <h1>To Do List</h1>
+    <div class="input-info">
+      <label for="toDoListInput">Please enter what you need to do:</label>
+      <input id="toDoListInput" placeholder="please type here...">
+      <button id="submit-button">Submit</button>
+      <button id="clear-list-button">Clear List</button>
+    </div>
+  </div>
+  <div id="task"></div>
   <script src="DoList.js"></script>
+</body>
 </html>

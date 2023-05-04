@@ -1,36 +1,41 @@
-const details = document.getElementById("details");
+
 const submitButton = document.getElementById("submit-button");
-submitButton.addEventListener("click", submit);
-let input = document.getElementById("input");
+submitButton.addEventListener("click", submittedValue);
 
-const clear = document.getElementById("clear-list-button");
-clear.addEventListener("click", clear);
+const clearListButton = document.getElementById("clear-list-button")
+clearListButton.addEventListener("click", clearList);
 
-function 
+let task = document.getElementById("task");
 
+let toDoListInput = document.getElementById("toDoListInput");
 
+toDoListInput.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    submittedValue();
+  }
+});
 
-
-function submit() {
-    const details = document.getElementById("details");
-    let input = document.getElementById("input").value;
-    let par = document.createElement("p");
-    par.textContent = input;
-    details.appendChild(par);
+function submittedValue(){
+    let toDoListInputValue = toDoListInput.value;
+    let removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    let newPara = document.createElement("h2");
+    newPara.textContent = toDoListInputValue;
+    task.appendChild(newPara);
+    task.appendChild(removeButton);
     
-    
-    
-    
-    //    return details.innerHTML = `
-    //    <div class="lists">
-    //      <h2 id="tasks">${input}</h2>
-    //      <i class="fa-solid fa-x"></i> 
-    //    </div>
-    //    `
-      
-};
+    removeButton.addEventListener("click", function() {
+        newPara.remove();
+        removeButton.remove();
+    });
+    //Set input box text back to placeholder
+    toDoListInput.value = "";
+    toDoListInput.placeholder = "please type here...";
+}
 
-
-
+function clearList(){
+    task.innerHTML = "";
+}
 
 
