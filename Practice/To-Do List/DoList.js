@@ -16,6 +16,12 @@ toDoListInput.addEventListener("keydown", function(event) {
   }
 });
 
+// Load the saved items from localStorage
+let savedItems = localStorage.getItem("toDoListItems");
+if (savedItems) {
+  task.innerHTML = savedItems;
+}
+
 function submittedValue(){
     let toDoListInputValue = toDoListInput.value;
     let removeButton = document.createElement("button");
@@ -28,14 +34,25 @@ function submittedValue(){
     removeButton.addEventListener("click", function() {
         newPara.remove();
         removeButton.remove();
+        saveListItems();
     });
+
+    
+
     //Set input box text back to placeholder
     toDoListInput.value = "";
     toDoListInput.placeholder = "please type here...";
+    saveListItems();
 }
 
 function clearList(){
     task.innerHTML = "";
+    saveListItems();
 }
-
+ 
+function saveListItems(){
+    // Save the list items in localStorage
+  let listItems = task.innerHTML;
+  localStorage.setItem("toDoListItems", listItems);
+}
 
