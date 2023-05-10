@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date to Epoch Converter</title>
+    <style>
+      body {
+        background-color: #222;
+        color: #fff;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #fff;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      th {
+        background-color: #555;
+        text-align: left;
+        font-weight: normal;
+      }
+      input[type="date"],
+      input[type="time"] {
+        background-color: #555;
+        border: none;
+        color: #fff;
+        padding: 5px;
+        font-size: 16px;
+        width: 150px;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+      input[type="time"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+      button {
+        background-color: #333;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.2s;
+      }
+      button:hover {
+        background-color: #555;
+      }
+      div.wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        height: 100vh;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      form label {
+        margin-bottom: 0.5rem;
+      }
+
+      form input,
+      form button {
+        margin-bottom: 1rem;
+      }
+
+      form button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background-color: #0069d9;
+      }
+      .table-wrapper {
+        height: 100%;
+        max-height: calc(
+          100vh - 150px
+        ); /* subtract the height of the header and form */
+        overflow-y: auto;
+        padding-bottom: 20px;
+        position: relative;
+      }
+      .table-wrapper thead th {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Date to Epoch Converter</h1>
+      <form>
+        <label for="date-input">Enter a date:</label>
+        <input type="date" id="date-input" value="2023-01-01" required />
+        <label for="time-input">Time:</label>
+        <input type="time" id="time-input" value="00:00" required />
+        <button type="submit">Convert to Epoch</button>
+      </form>
+      <br />
+      <div class="table-wrapper">
+        <table id="date-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Seconds since Epoch</th>
+              <th>Copy to Clipboard</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      const form = document.querySelector("form");
+      const tableBody = document.querySelector("tbody");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const dateInput = document.querySelector("#date-input").value;
+        const timeInput = document.querySelector("#time-input").value;
+        const dateTimeString = `${dateInput} ${timeInput}`;
+        const date = new Date(dateTimeString);
+        const epoch = Math.floor(date.getTime() / 1000);
+
+        const newRow = document.createElement("tr");
+        const dateCell = document.createElement("td");
+        const options = { day: "2-digit", month: "short", year: "2-digit" };
+        const formattedDate = date.toLocaleDateString("en-GB", options);
+        dateCell.textContent = formattedDate;
+        newRow.appendChild(dateCell);
+
+        const timeCell = document.createElement("td");
+        const optionsTime = { hour: "2-digit", minute: "2-digit" };
+        const formattedTime = date.toLocaleTimeString("en-US", optionsTime);
+        timeCell.textContent = formattedTime;
+        newRow.appendChild(timeCell);
+
+        const epochCell = document.createElement("td");
+        epochCell.textContent = epoch;
+        newRow.appendChild(epochCell);
+
+        const clipboardCell = document.createElement("td");
+        const clipboardButton = document.createElement("button");
+        clipboardButton.textContent = "Copy";
+        clipboardButton.addEventListener("click", function (e) {
+          navigator.clipboard.writeText(epoch.toString());
+          // attach the showNotification function to the "copy" event
+          showNotification(e);
+        });
+        clipboardCell.appendChild(clipboardButton);
+        newRow.appendChild(clipboardCell);
+
+        const firstRow = tableBody.querySelector("tr:first-of-type");
+        if (firstRow) {
+          firstRow.insertAdjacentElement("beforebegin", newRow);
+        } else {
+          tableBody.appendChild(newRow);
+        }
+
+        const tableWrapper = document.querySelector(".table-wrapper");
+        tableWrapper.scrollTop = 0;
+      });
+
+      function showNotification(e) {
+        // create a div element to hold the notification
+        var notification = document.createElement("div");
+
+        // add some text to the notification
+        notification.innerHTML = "Copied to clipboard";
+
+        // style the notification
+        notification.style.position = "absolute";
+        notification.style.top = e.clientY + "px";
+        notification.style.left = e.clientX + 50 + "px";
+        notification.style.padding = "10px";
+        notification.style.backgroundColor = "#333";
+        notification.style.color = "#fff";
+        notification.style.borderRadius = "5px";
+        notification.style.opacity = 1;
+        notification.style.transition = "opacity 1s ease-in-out";
+
+        // add the notification to the page
+        document.body.appendChild(notification);
+
+        // fade out the notification after 1 second
+        setTimeout(function () {
+          notification.style.opacity = 0;
+          setTimeout(function () {
+            document.body.removeChild(notification);
+          }, 1000);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
