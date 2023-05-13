@@ -26,13 +26,8 @@ function eButton(){
         <td>$${amountSpent.value}</td>
         <td><button class = "deleteBtn">DELETE</button></td>
       </tr>
-      <tfoot>
-        <tr>
-          <td>Total</td>
-          <td></td>
-        </tr>
-      </tfoot>
     `;
+    
  }
 
  function onDeleteRow(x){
