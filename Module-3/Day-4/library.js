@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 const library = [];
 //Created book that returns an object
 function createBook(title, author, genre, yearPublished) {
-    var book = {
+    const book = {
             bookTitle: title,
             bookAuthor: author,
             bookGenre: genre,
