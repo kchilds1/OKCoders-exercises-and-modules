@@ -189,9 +189,9 @@ ul {
 /* CONTACT INFO */
 form {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-content: center;
+  flex-direction:column;  
+  justify-content: space-evenly; 
+  align-content: center; 
   background-color: burlywood;
   margin-top: 0.625rem;
   padding: 1.25rem;
