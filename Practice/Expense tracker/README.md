@@ -8,3 +8,4 @@
  - Add Expense button(green background color)
 - After hitting the Add Expense button it will show the Name,     date, amount, and a x button below the add expense button.
 - must be dynamic
+- going to add total amount to tracker

@@ -1,0 +1,53 @@
+* {
+    Box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+h2 {
+    color: green;
+}
+
+.inputs {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.add-note-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.note-details {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.details{
+    width: 60px;
+    background-color: blue;
+    border-radius: 5px;
+    color:white;
+}

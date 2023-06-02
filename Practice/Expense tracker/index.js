@@ -27,7 +27,6 @@ function eButton(){
         <td><button class = "deleteBtn">DELETE</button></td>
       </tr>
     `;
-    
  }
 
  function onDeleteRow(x){
@@ -39,4 +38,4 @@ function eButton(){
     btn.closest("tr").remove(); //THIS WILL REMOVE THE CLOSEST TABLE ROW WHEN I CLICK THE DELETE BUTTON
  }
 
- //let totalExpense = 
+
