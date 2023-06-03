@@ -34,6 +34,7 @@ h2 {
     justify-content: center;
     margin-top: 10px;
     padding: 10px;
+    
 }
 
 .note-details {
@@ -43,6 +44,25 @@ h2 {
     flex-direction: column;
     border-style: solid;
     border-width: 1px;
+    border-radius: 10px;
+    border-width: 2px;
+    margin: 10px;
+}
+
+.noteB {
+    cursor: pointer;
+}
+
+.jsNotes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.fa-x {
+    margin-left: 181px;
+    cursor: pointer;
 }
 
 .details{
@@ -50,4 +70,5 @@ h2 {
     background-color: blue;
     border-radius: 5px;
     color:white;
+    cursor: pointer;
 }
