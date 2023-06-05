@@ -12,18 +12,18 @@ You will need the following:
 
 ### Foundation
 
-- copy over the library program from the previous day
-- delete or rename any code that is no longer relevant for the coffee shop (e.g. the `add` command), you mainly just want to re-use the prompt() function
+<!-- - copy over the library program from the previous day
+- delete or rename any code that is no longer relevant for the coffee shop (e.g. the `add` command), you mainly just want to re-use the prompt() function -->
 
 ### List Menu
 
-- create an array of objects, each object should have a name, price, and description for a menu item
-- create a function that will list the menu items, the description, and their prices
+<!-- - create an array of objects, each object should have a name, price, and description for a menu item
+- create a function that will list the menu items, the description, and their prices -->
 - hook this function up the the cli/prompt
 
 ### Order
 
-- create a function that will add an item to the customers order (order would be an array stored in global state)
+<!-- - create a function that will add an item to the customers order (order would be an array stored in global state) -->
 
 ### Checkout
 
@@ -42,3 +42,11 @@ You will need the following:
 - read the below, try to incorporate some of the ideas into your program
 
 https://medium.com/@manavshrivastava/lets-build-a-cli-command-line-interface-with-node-js-d3b5faacc5ea
+
+
+##
+
+## Steps
+- copy over code from Day 5 library.js and remove what isn't needed for my coffee shop
+- Used readline to communicate with GitBash and created a variable rl as an interface to ask questions and see answers.
+- 
