@@ -19,7 +19,7 @@ You will need the following:
 
 <!-- - create an array of objects, each object should have a name, price, and description for a menu item
 - create a function that will list the menu items, the description, and their prices -->
-- hook this function up the the cli/prompt
+<!-- - hook this function up the the cli/prompt -->
 
 ### Order
 
