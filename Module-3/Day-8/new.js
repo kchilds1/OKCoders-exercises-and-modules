@@ -11,13 +11,13 @@ const rl = readline.createInterface({
 
 //Menu items
 let menu = [
-    { item: "Espresso", price: 2.5, description: "hot"},
-    { item: "Cappuccino", price: 3.0, description: "hot"},
-    { item: "Latte", price: 3.5, description: "cold"},
-    { item: "Hot Latte", price: 4.0, description: "hot"},
-    { item: "Mocha", price: 4.0, description: "hot"},
-    { item: "Americano", price: 2.0, description: "hot"},
-    { item: "Macchiato", price: 3.0, description: "cold"}
+    { item: "Espresso", price: 2.50, description: "hot"},
+    { item: "Cappuccino", price: 3.00, description: "hot"},
+    { item: "Latte", price: 3.50, description: "cold"},
+    { item: "Hot Latte", price: 4.00, description: "hot"},
+    { item: "Mocha", price: 4.00, description: "hot"},
+    { item: "Americano", price: 2.00, description: "hot"},
+    { item: "Macchiato", price: 3.00, description: "cold"}
 ]
 //Array to store items
 let cart = [];
@@ -62,6 +62,7 @@ function listCoffee() {
   cartStats();
   console.log("The coffee in the cart is:");
   cart.forEach((name) => console.log(name));
+  totalAmount();
 }
 
 /*Interface function to communicate with Gitbash or the Terminal
