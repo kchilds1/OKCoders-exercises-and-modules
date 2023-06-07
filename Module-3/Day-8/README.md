@@ -6,9 +6,9 @@
 
 You will need the following:
 
-- an account and api key from https://weatherapi.com
+<!-- - an account and api key from https://weatherapi.com
 - code from Day 7 weather.js
-- code from Day 5 library.js
+- code from Day 5 library.js -->
 
 ### Foundation
 
@@ -27,11 +27,11 @@ You will need the following:
 
 ### Checkout
 
-- create a function that will calculate the total price of the order, and the total items in their order, and show that to the user
+<!-- - create a function that will calculate the total price of the order, and the total items in their order, and show that to the user -->
 
 ### Suggest
 
-- create a function that will suggest an item to the customer based on the current weather (perhaps iced coffee if it is hot?), allow the customer to input their location.
+<!-- - create a function that will suggest an item to the customer based on the current weather (perhaps iced coffee if it is hot?), allow the customer to input their location. -->
 
 ### Future Suggest
 

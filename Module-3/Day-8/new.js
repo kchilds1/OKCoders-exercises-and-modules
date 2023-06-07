@@ -76,7 +76,8 @@ function zipInput() {
             //make sure the zip is 5 characters in length and make sure it is only digits
             if(zip.length === 5 && /^\d+$/.test(zip)){
                 //Get API url
-                let url = `https://api.weatherapi.com/v1/current.json?key=d8d5bfc23a1b4fd285c40136230106&q=${zip}&aqi=no`;
+                let url = `https://api.weatherapi.com/v1/forecast.json?key=d8d5bfc23a1b4fd285c40136230106&q=${zip}&days=2&aqi=no&alerts=no`
+                //let url = `https://api.weatherapi.com/v1/current.json?key=d8d5bfc23a1b4fd285c40136230106&q=${zip}&aqi=no`;
                 let currentWeatherPromise = fetch(url);
 
                 //display the current weather and 
@@ -89,13 +90,21 @@ function zipInput() {
                     console.log(currentTime);
                     //console log the temp
                     const json = await currentWeatherResponse.json();
-                    console.log(`The current temp near you is ${json.current.temp_f}`);
+                    console.log(`The current temp in ${json.location.name} is ${json.current.temp_f} degrees`);
                     //suggest type of coffee. If under 70 degrees suggest hot Espresso. If over 70 suggest cold latte
                     if(json.current.temp_f > 70){
                            console.log("Hot days like today deserve a cold Latte for only $3.50");
                        }else{
                            console.log("Cold days like today deserve a hot Espresso for only $2.50");
                        }
+                       //Get the forecast for tomorrow and display the hottest the temp can be
+                       let maxTempF = json.forecast.forecastday[0].day.maxtemp_f;
+                    console.log(`Weather forecast predicts the high for tomorrow in ${json.location.name} will be ${maxTempF} degrees`);
+                    if(maxTempF > 70){
+                        console.log("Would you like to cool off tomorrow with a cold Latte for only $3.50?");
+                       }else{
+                           console.log("Would you like to warm up to a hot Espresso for only $2.50 tomorrow?");
+                    }
                   }
                   getCurrentWeather();
                 prompt();
