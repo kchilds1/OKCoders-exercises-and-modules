@@ -104,7 +104,7 @@ function pay() {
 
  //Function to select specific day coffee is going to be ordered along with the weather
  async function futureSuggestion(days, zipcode, time) {
-  days = (days-1);
+  
      const futureUrl = `https://api.weatherapi.com/v1/forecast.json?key=d8d5bfc23a1b4fd285c40136230106&q=${zipcode}&days=${days}&aqi=no&alerts=no`
      const futureTemp_f = await getFutureWeather(futureUrl, days);
   }
@@ -114,8 +114,8 @@ function pay() {
      const futureWeatherResponse = await fetch(futureUrl);
      const json = await futureWeatherResponse.json();
      const forecast = await json.forecast.forecastday[days - 1].hour[4].temp_f;
-     console.log (`${days} day from now the temperature will be ${forecast}`);
-     if (json.current.temp_f > 70) {
+     console.log (`${days} day from now the temperature will be ${forecast} degrees`);
+     if (forecast > 70) {
       console.log(
         "Hot days like today deserve a cold Latte for only $3.50"
       );
