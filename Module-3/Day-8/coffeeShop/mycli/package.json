@@ -1,0 +1,15 @@
+{
+  "name": "mycli",
+  "version": "1.0.0",
+  "description": "Adding boxen and chalk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenneth",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.1.0",
+    "chalk": "^5.2.0"
+  }
+}
