@@ -8,21 +8,21 @@ let shopItemsData = [{
        id:"HBCS",
     name: "HAND-BREADED CHICKEN SANDWICH",
     cals: 640,
-    img: "HAND-BREADED CHICKEN SANDWICH.png"
+    img: "HandBreadedChickenSandwich.png"
    },
    
    {
     id:"SSCC",
     name: "SUPER STAR® WITH CHEESE COMBO",
     cals: "1220-1940",
-    img: "SUPERSTARWITHCHEESECOMBO.png"
+    img: "SuperStarWithCheeseCombo.png"
    },
    
    {
        id:"LBB",
     name: "LOADED BREAKFAST BURRITO",
     cals: 580,
-    img: "LOADED BREAKFAST BURRITO.png"
+    img: "LoadedBreakfastBurrito.png"
    }]
 
    
