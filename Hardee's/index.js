@@ -32,7 +32,6 @@ let shop = document.getElementById("shop");
 let generateShop =() =>{
     return (shop.innerHTML = shopItemsData.map((x)=>{
         let {id, name, cals, img} = x;
-        console.log(x);
          return `
          <div id=product-id${id} class="m-items">
            <img src=${img} width="170" height="100"/>
