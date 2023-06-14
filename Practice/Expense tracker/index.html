@@ -18,8 +18,10 @@
         <input class = "expense-name" id="expense" placeholder="Expense location?" required>
         <label for="Date">Date: </label>
         <input type="date" class="date-of-purchase" id="Date" required/>
-        <label for="amount-spent">Amount: </label>
+        <label for="amount-spent"> Expense Amount: </label>
         <input type = "number" class = "amount-spent" id="amount-spent" required />
+        <!-- <label for="budget"> Budget: </label>
+        <input type = "number" class = "budget" id="budget" required /> -->
     </div>
     <div class="button">
       <button type="submit" class="add-expense" id= "add-expense">Add Expense</button>
@@ -34,6 +36,7 @@
         </thead>
         <tbody id="tbody-element">
         </tbody>
+        <div id="sum" class="sum"></div>
     </table>
     <script src="index.js"></script>
   </div>
